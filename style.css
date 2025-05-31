@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  transition: background 0.4s, color 0.4s;
+}
+
+.container {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.controls input, .controls button {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.controls input {
+  width: 200px;
+}
+
+button {
+  background-color: #0077ff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005ed1;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.forecast-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.alert {
+  background-color: #ff5555;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.chart-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
