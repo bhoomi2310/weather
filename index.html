@@ -2,32 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weather App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeatherNow</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>🌦️ WeatherNow</h1>
-      <div class="controls">
-        <input type="text" id="cityInput" placeholder="Enter city name" />
-        <button onclick="getWeather()">Search</button>
-        <button onclick="getWeatherByLocation()">📍 Use My Location</button>
-        <button id="modeToggle">🌙</button>
-      </div>
-    </div>
 
-    <div id="alertBox" class="hidden alert"></div>
-    <div id="currentWeather" class="card hidden"></div>
-    <div id="hourlyForecast" class="forecast-section hidden"></div>
-    <div id="forecast" class="forecast-section hidden"></div>
-    <div id="aqiChartContainer" class="chart-container hidden">
-      <h2>AQI Chart (PM2.5 & PM10)</h2>
-      <canvas id="aqiChart"></canvas>
+  <!-- Landing Page -->
+  <div id="landing" class="landing-page">
+    <h1 class="landing-title">WeatherNow</h1>
+    <div class="landing-controls">
+      <input type="text" id="cityInputLanding" placeholder="Enter city name" />
+      <button onclick="searchFromLanding()">Search</button>
+      <button onclick="getWeatherByLocation()">Use My Location</button>
+
+
+      <button id="modeToggle">Toggle Dark/Light Mode</button>
     </div>
   </div>
+
+  <!-- Main Container (hidden initially) -->
+  <div class="container" id="mainContainer">
+
+    <!-- Header -->
+    <header>
+      <h1>WeatherNow</h1>
+    </header>
+
+    <!-- Controls -->
+    <div class="controls">
+      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <button onclick="getWeather()">Search</button>
+      <button onclick="getWeatherByLocation()">Use My Location</button>
+     
+    </div>
+
+    <!-- Alert box for rain alerts -->
+    <div id="alertBox" class="alert hidden"></div>
+
+    <!-- Current Weather -->
+    <section class="weather-section center-card large-card" id="currentWeatherSection">
+      <h2>Current Weather in <span id="cityName"></span></h2>
+      <div id="currentWeather"></div>
+    </section>
+
+    <!-- 7-Day Forecast -->
+    <section class="forecast-section" id="forecastSection">
+      <h2></h2>
+      <div id="forecast" class="forecast-grid"></div>
+    </section>
+
+    <!-- Hourly Forecast -->
+    <section class="forecast-section" id="hourlySection">
+      <h2></h2>
+      <div id="hourlyForecast" class="forecast-grid"></div>
+    </section>
+
+    <!-- AQI Chart -->
+    <section class="aqi-section " id="aqiChartContainer">
+      <h2>Air Quality</h2>
+  
+      <canvas id="aqiChart" width="600" height="300"></canvas>
+    </section>
+
+    <!-- AQI Details -->
+    <section class="aqi-section center-card large-card " id="aqiDetailsSection">
+      <div id="aqiDetails"></div>
+    </section>
+
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
