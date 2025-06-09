@@ -1,11 +1,9 @@
-/* Global Reset */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Body */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: url('https://giffiles.alphacoders.com/194/19490.gif') no-repeat center center fixed;
@@ -16,12 +14,10 @@ body {
   overflow-x: hidden;
 }
 
-/* Dark Mode */
 .dark-mode {
   filter: invert(1) hue-rotate(180deg);
 }
 
-/* Overlay for blur if needed */
 .overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -30,7 +26,7 @@ body {
   z-index: -1;
 }
 
-/* Landing Page */
+
 .landing-page {
   position: fixed;
   top: 0; left: 0;
@@ -87,14 +83,13 @@ body {
   background-color: #0056b3;
 }
 
-/* Container */
 .container {
   max-width: 1200px;
   margin: 3rem auto;
   padding: 0 1rem;
 }
 
-/* Controls (on main page) */
+
 .controls {
   display: flex;
   flex-wrap: wrap;
@@ -129,7 +124,7 @@ body {
   background-color: #0056b3;
 }
 
-/* Alert Box */
+
 .alert {
   background-color: #ffcc00;
   color: #000;
@@ -143,7 +138,6 @@ body {
   margin-right: auto;
 }
 
-/* Sections Titles */
 .weather-section h2,
 .forecast-section h2,
 .aqi-section h2 {
@@ -176,7 +170,7 @@ body {
 }
 
 
-/* Forecast Grid */
+
 .forecast-grid {
   display: flex;
   flex-wrap: wrap;
@@ -184,7 +178,7 @@ body {
   justify-content: center;
 }
 
-/* Cards */
+
 .card {
   background: rgba(255, 255, 255, 0.85);
   color: #000;
@@ -202,31 +196,30 @@ body {
   box-shadow: 0 8px 25px rgba(0,0,0,0.45);
 }
 
-/* Center cards */
 .center-card {
   margin: 0 auto;
   position : center
 }
 
-/* Large cards */
+
 .large-card {
   width: 80% !important;
   max-width: 700px;
   position: center;
 }
 
-/* Hidden */
+
 .hidden {
   display: none !important;
 }
 
-/* AQI Chart container */
+
 #aqiChartContainer {
   max-width: 700px;
   margin: 2rem auto;
 }
 
-/* AQI Details container */
+
 #aqiDetails {
   max-width: 700px;
   background: rgba(255,255,255,0.85);
@@ -238,7 +231,7 @@ body {
   user-select: none;
 }
 
-/* Weather Backgrounds */
+
 .sunny-bg {
   background: url('https://i.pinimg.com/originals/de/d7/d1/ded7d113506d8d4287f893a3c01a0323.gif') center/cover no-repeat fixed;
 }
@@ -271,7 +264,7 @@ body {
   background: url('https://i.pinimg.com/originals/c8/ba/30/c8ba30ee61944cc26dbde4022a0a4b72.gif') center/cover no-repeat;
 } 
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .card {
     width: 120px;
