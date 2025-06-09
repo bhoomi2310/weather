@@ -6,14 +6,14 @@ function searchFromLanding() {
   const city = document.getElementById("cityInputLanding").value;
   if (city.trim() !== "") {
     document.getElementById("landing").style.display = "none";
-    document.getElementById("cityInput").value = city; // Set value in hidden city input
-    getWeather(); // This must be getWeather() not getWeatherData()
+    document.getElementById("cityInput").value = city; 
+    getWeather();
   }
 }
 
 
 window.onload = () => {
-  // Don’t auto-fetch weather on load — show landing page
+  
   const modeToggle = document.getElementById('modeToggle');
   if (modeToggle) {
     modeToggle.addEventListener('click', () => {
@@ -75,7 +75,7 @@ async function fetchWeather(query, displayName) {
     showCurrentWeather(data.current, displayName);
     showForecast(data.forecast.forecastday);
 
-    // Extract city local hour from data.location.localtime e.g. "2025-06-04 16:22"
+    
     const localTimeStr = data.location.localtime;
     const localHour = parseInt(localTimeStr.split(' ')[1].split(':')[0], 10);
 
@@ -136,7 +136,7 @@ function showHourly(hourlyData, localHour) {
   if (!el) return;
   el.innerHTML = '<h2 style="grid-column: span 4;">Hourly Forecast (Next 12 hrs)</h2>';
 
-  // Get next 12 hours starting from city local hour
+  
   const next12Hours = [];
   for (let i = 0; i < 12; i++) {
     next12Hours.push(hourlyData[(localHour + i) % 24]);
@@ -160,7 +160,7 @@ function showRainAlert(hourlyData, localHour) {
   const el = document.getElementById('alertBox');
   if (!el) return;
 
-  // Check next 12 hours for rain based on city local hour
+
   const next12Hours = [];
   for (let i = 0; i < 12; i++) {
     next12Hours.push(hourlyData[(localHour + i) % 24]);
