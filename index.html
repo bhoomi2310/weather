@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- Landing Page -->
+  
   <div id="landing" class="landing-page">
     <h1 class="landing-title">WeatherNow</h1>
     <div class="landing-controls">
@@ -22,15 +22,15 @@
     </div>
   </div>
 
-  <!-- Main Container (hidden initially) -->
+  
   <div class="container" id="mainContainer">
 
-    <!-- Header -->
+    
     <header>
       <h1>WeatherNow</h1>
     </header>
 
-    <!-- Controls -->
+    
     <div class="controls">
       <input type="text" id="cityInput" placeholder="Enter city name" />
       <button onclick="getWeather()">Search</button>
@@ -38,35 +38,35 @@
      
     </div>
 
-    <!-- Alert box for rain alerts -->
+    
     <div id="alertBox" class="alert hidden"></div>
 
-    <!-- Current Weather -->
+    
     <section class="weather-section center-card large-card" id="currentWeatherSection">
       <h2>Current Weather in <span id="cityName"></span></h2>
       <div id="currentWeather"></div>
     </section>
 
-    <!-- 7-Day Forecast -->
+    
     <section class="forecast-section" id="forecastSection">
       <h2></h2>
       <div id="forecast" class="forecast-grid"></div>
     </section>
 
-    <!-- Hourly Forecast -->
+    
     <section class="forecast-section" id="hourlySection">
       <h2></h2>
       <div id="hourlyForecast" class="forecast-grid"></div>
     </section>
 
-    <!-- AQI Chart -->
+    
     <section class="aqi-section " id="aqiChartContainer">
       <h2>Air Quality</h2>
   
       <canvas id="aqiChart" width="600" height="300"></canvas>
     </section>
 
-    <!-- AQI Details -->
+    
     <section class="aqi-section center-card large-card " id="aqiDetailsSection">
       <div id="aqiDetails"></div>
     </section>
